@@ -3,8 +3,8 @@ body {
 margin: 0;
 font-family: Arial, sans-serif;
 line-height: 1.6;
-background-color: #000; /* Black background */
-color: #fff; /* White text */
+background-color: #000;
+color: #fff; 
 }
 
 /* Navbar */
@@ -305,32 +305,47 @@ text-decoration: underline;
 
 /* About Section */
 .about-content {
-display: flex;
-flex-wrap: wrap;
-gap: 20px;
-align-items: center;
-margin: 20px 0;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.about-image {
+    flex: 0 0 250px; /* Fixed width for the image */
+
 }
 
 .about-image img {
-width: 100%;
-max-width: 300px;
-border-radius: 10px;
-border: 2px solid #f39c12;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #f39c12;
 }
 
+/* Scrollable Text */
 .about-text {
-flex: 1;
+    flex: 1; /* Takes the remaining space */
+    max-height: 200px; /* Limits the text height */
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding: 10px;
+    border: 1px solid #f39c12; 
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 5px;
 }
 
-.about-text h2 {
-color: #f39c12;
-margin-bottom: 10px;
+/* Optional: Customize scrollbar for modern look */
+.about-text::-webkit-scrollbar {
+    width: 8px;
 }
 
-.about-text p {
-font-size: 1.1rem;
-line-height: 1.8;
+.about-text::-webkit-scrollbar-thumb {
+    background-color: #f39c12;
+    border-radius: 5px;
+}
+
+.about-text::-webkit-scrollbar-track {
+    background: #333;
 }
 
 /* Contact Form */
