@@ -118,15 +118,15 @@ display: block;
 
 /* Header */
 header {
-background-color: #000; /* Fallback background color */
+/*background-color: #000; /* Fallback background color */
+background: linear-gradient(135deg, #4d4d4d, #000);
 color: white;
 padding: 20px 0;
 text-align: center;
 display: flex;
 flex-direction: column;
 align-items: center;
-/* CSS Background: header background image */
-background: url('/images/header-bg.jpg') no-repeat center center/cover;
+border-bottom: 2px solid #f39c12;
 }
 
 .header-overlay {
@@ -137,8 +137,12 @@ border-radius: 8px;
 
 /* Header Text */
 header h1 {
-margin: 10px 0 0;
-font-size: 2rem;
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #f39c12, #e67e22);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Optional for more depth */
 }
 
 header p {
@@ -152,8 +156,8 @@ max-width: 900px;
 margin: 20px auto;
 padding: 20px;
 background: #1a1a1a; /* Dark background */
-border: 10px solid transparent; /* Required for border-image */
-border-image: url('/sample.jp') 30 round; /* CSS Border Images */
+border: 4px solid transparent; /* Required for border-image */
+/*border-image: linear-gradient(to right,#f39c12, #e67e22)1; /* CSS Border Images */
 border-radius: 8px;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -191,7 +195,8 @@ margin: 20px 0;
 /* Image Gallery Section */
 .image-gallery {
 text-align: center;
-background: #1a1a1a url('/images/gallery-bg.jpg') no-repeat center center;
+background: #1a1a1a ;
+border: 2px solid #f39c12;
 
 /* Gallery background*/
 background-size: cover;
